@@ -1,49 +1,60 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   background-color: #0d0d0d;
   color: #e03c31;
-}
-
-header {
-  background-color: #000;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  height: 50px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav a {
-  color: #e03c31;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.hero {
   text-align: center;
-  padding: 60px 20px;
+}
+
+.logo-center {
+  padding: 60px 20px 20px;
   background-color: #1a1a1a;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.logo-center img {
+  height: 120px;
+}
+
+.logo-center h1 {
+  font-size: 2.5em;
+  margin: 20px 0 10px;
+  color: #e03c31;
 }
 
 .cta-button {
-  background-color: #e03c31;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 4px;
   display: inline-block;
   margin-top: 20px;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #e03c31 0%, #ff5e3a 100%);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+.ornament-divider {
+  height: 40px;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/42/Ornamental_line_4.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: 40px auto;
 }
 
 .content-section {
@@ -52,9 +63,22 @@ nav a {
   margin: auto;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.decor-header .decor-top,
+.decor-footer .decor-bottom {
+  height: 60px;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/fd/Ornamental_border_02.svg');
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: contain;
+}
+
 footer {
   background-color: #000;
   color: #e03c31;
-  text-align: center;
   padding: 20px;
 }
